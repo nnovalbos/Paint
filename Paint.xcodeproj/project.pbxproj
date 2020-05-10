@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		2ADC92322467E13300AC417D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC92312467E13300AC417D /* AppDelegate.swift */; };
 		2ADC92342467E13300AC417D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC92332467E13300AC417D /* SceneDelegate.swift */; };
-		2ADC92362467E13300AC417D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC92352467E13300AC417D /* ViewController.swift */; };
+		2ADC92362467E13300AC417D /* BlackboardViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC92352467E13300AC417D /* BlackboardViewController .swift */; };
 		2ADC92392467E13300AC417D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC92372467E13300AC417D /* Main.storyboard */; };
 		2ADC923B2467E13400AC417D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC923A2467E13400AC417D /* Assets.xcassets */; };
 		2ADC923E2467E13400AC417D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC923C2467E13400AC417D /* LaunchScreen.storyboard */; };
+		2ADC92492467E2F100AC417D /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC92482467E2F100AC417D /* Line.swift */; };
+		2ADC924B2467F0DB00AC417D /* BlackboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC924A2467F0DB00AC417D /* BlackboardView.swift */; };
+		2ADC924E2467FF6500AC417D /* BlackboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC924D2467FF6500AC417D /* BlackboardViewModel.swift */; };
+		2ADC92512468003800AC417D /* IBlackboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC92502468003800AC417D /* IBlackboardDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2ADC922E2467E13300AC417D /* Paint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADC92312467E13300AC417D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADC92332467E13300AC417D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2ADC92352467E13300AC417D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2ADC92352467E13300AC417D /* BlackboardViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlackboardViewController .swift"; sourceTree = "<group>"; };
 		2ADC92382467E13300AC417D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ADC923A2467E13400AC417D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADC923D2467E13400AC417D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADC923F2467E13400AC417D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADC92482467E2F100AC417D /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		2ADC924A2467F0DB00AC417D /* BlackboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackboardView.swift; sourceTree = "<group>"; };
+		2ADC924D2467FF6500AC417D /* BlackboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackboardViewModel.swift; sourceTree = "<group>"; };
+		2ADC92502468003800AC417D /* IBlackboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBlackboardDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		2ADC92302467E13300AC417D /* Paint */ = {
 			isa = PBXGroup;
 			children = (
+				2ADC925224680C0F00AC417D /* Views */,
+				2ADC924F2468001700AC417D /* Contracts */,
+				2ADC924C2467FF2400AC417D /* ViewModels */,
+				2ADC92472467E23100AC417D /* Models */,
 				2ADC92312467E13300AC417D /* AppDelegate.swift */,
 				2ADC92332467E13300AC417D /* SceneDelegate.swift */,
-				2ADC92352467E13300AC417D /* ViewController.swift */,
 				2ADC92372467E13300AC417D /* Main.storyboard */,
 				2ADC923A2467E13400AC417D /* Assets.xcassets */,
 				2ADC923C2467E13400AC417D /* LaunchScreen.storyboard */,
 				2ADC923F2467E13400AC417D /* Info.plist */,
 			);
 			path = Paint;
+			sourceTree = "<group>";
+		};
+		2ADC92472467E23100AC417D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC92482467E2F100AC417D /* Line.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2ADC924C2467FF2400AC417D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC924D2467FF6500AC417D /* BlackboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2ADC924F2468001700AC417D /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC92502468003800AC417D /* IBlackboardDelegate.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		2ADC925224680C0F00AC417D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC924A2467F0DB00AC417D /* BlackboardView.swift */,
+				2ADC92352467E13300AC417D /* BlackboardViewController .swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ADC92362467E13300AC417D /* ViewController.swift in Sources */,
+				2ADC924E2467FF6500AC417D /* BlackboardViewModel.swift in Sources */,
+				2ADC92362467E13300AC417D /* BlackboardViewController .swift in Sources */,
 				2ADC92322467E13300AC417D /* AppDelegate.swift in Sources */,
+				2ADC924B2467F0DB00AC417D /* BlackboardView.swift in Sources */,
+				2ADC92512468003800AC417D /* IBlackboardDelegate.swift in Sources */,
 				2ADC92342467E13300AC417D /* SceneDelegate.swift in Sources */,
+				2ADC92492467E2F100AC417D /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
